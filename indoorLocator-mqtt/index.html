@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,
+		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="expires" content="-1" />
+
+	<title>Indoor Locator App</title>
+
+	<style>
+		@import 'ui/css/evothings-app.css';
+		@import 'ui/css/style.css';
+		@import 'ui/css/bootstrap.min.css';
+	</style>
+
+	<script>
+	// Redirect console.log to Evothings Workbench.
+	if (window.hyper && window.hyper.log) { console.log = hyper.log }
+	</script>
+
+	<script src="cordova.js"></script>
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="libs/handlebars/handlebars.js"></script>
+	<script src="libs/evothings/evothings.js"></script>
+	<script src="libs/evothings/ui/ui.js"></script>
+	<script src="app.js"></script>
+	<script>
+		function showdetails(img)
+	{
+		console.log(img.id);
+		var backg = $('#'+img.id);
+		console.log(backg.attr("xlink:href"));
+		if(backg.attr("xlink:href")=="ui/images/active.svg")
+		{
+			$('#myModal').modal('toggle');
+		}
+		else
+		{
+			alert("Sorry you are not in the clicked beacon range");
+		}
+	}
+	</script>
+	<script id="class-template" type="text/x-handlebars-template">
+
+		<div class="card" style="width:17rem;margin:20px 0 24px 0">
+	  
+		  <img class="card-img-top" src="ui/images/{{image}}.png" alt="image" style="width:100%">
+	  
+			  <div class="card-body">
+	  
+				  <h4 class="card-title" >Stream: {{stream}}</h4>
+	  
+					  <p class="card-text">Lab: {{lab}}</p>
+	  
+					  <p class="card-text">Instructor: {{instructor}}</p>
+	  
+					  <p class="card-text">Timings: {{timings}}</p>
+	  
+			  </div>
+	  
+	  </div>
+	  
+	  </script>
+
+</head>
+
+<body>
+
+	<header>
+		<button class="back" onclick="history.back()">
+			<img src="ui/images/arrow-left.svg" />
+		</button>
+
+		<img class="logotype" src="ui/images/iLocateLogo.png" alt="Evothings" />
+
+		<!--<button class="menu" onclick=""><img src="ui/images/menu.svg" /></button>-->
+	</header>
+
+	<h4 class="user" >New Horizon EEE Lab Locator</h4>
+	<!--<ul id="found-beacons" class="dynamic"></ul>-->
+
+	<div>
+	<h6 class="user">Nearest beacon</h6>
+	<div id="nearest-beacons" class="user"></div>
+	</div>
+	<div class="container-fluid" style="height: 150px;">
+
+		<div class="row">
+	
+			<div class="col-xl-12">
+
+		
+	
+					<svg width="330" height="435"
+	
+						xmlns="http://www.w3.org/2000/svg" 
+	
+						xmlns:xlink="http://www.w3.org/1999/xlink">   
+	
+		 
+
+							<image xlink:href="ui/images/base_new_01.png" alt="Nature" width="400" height="400"  x="-30" y="35"/>
+	
+							
+								<image onclick="showdetails(this)" id="b1" xlink:href="ui/images/noActive.svg" x="60" y="142" width="20" height="20"/>  
+								<image id="L1" xlink:href="ui/images/bulboff_R.png"  x="110" y="100"  width="10" height="10"/>
+								
+								<image onclick="showdetails(this)"  id="b2" xlink:href="ui/images/noActive.svg"  x="60" y="205"  width="20" height="20"/>  
+								
+								<image onclick="showdetails(this)"  id="b3" xlink:href="ui/images/noActive.svg"  x="60" y="273"  width="20" height="20"/>  
+								
+								<image onclick="showdetails(this)"  id="b4" xlink:href="ui/images/noActive.svg"  x="160" y="375"  width="20" height="20"/>  
+								<image id="L2" xlink:href="ui/images/bulboff_R.png"  x="248" y="350"  width="10" height="10"/>
+	
+								<image id="point" xlink:href="ui/images/person.svg" x="115" y="220" height="25" width="40"/>
+	
+	  
+	
+					</svg>
+	
+					
+			
+	
+				 <!-- The DataModal --> 
+	
+				<div class="modal" id="myModal">
+	
+					<div class="modal-dialog modal-sm modal-dialog-centered">
+	
+						<div class="modal-content">
+	
+		  
+						
+						<!-- Modal Header -->
+	
+						<div class="modal-header">
+	
+							<h4 class="modal-title">Lab Details</h4>
+	
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+	
+						</div>
+	
+			
+	
+						<!-- Modal body -->
+	
+						<div class="modal-body">
+	
+						<div id="card-content">
+	
+						</div>
+	
+	
+	
+						</div>
+	
+			
+	
+						<!-- Modal footer -->
+	
+						<div class="modal-footer">
+	
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+	
+						</div>
+	
+			
+	
+						</div>
+	
+					</div>
+	
+				</div>	
+	
+			
+			
+			
+	
+		</div>
+	
+	</div>
+	</div>
+	<script src="libs/mqttws/mqttws.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{
+  "name": "ibeacon-scan-som",
+  "version": "1.0.0",
+  "title": "NEW HORIZON EEE LAB LOCATOR",
+  "description": "App that scans for iBeacons to be used as a starting point for iBeacons apps.",
+  "tags": [
+    {
+      "label": "ibeacon",
+      "type": "platform"
+    },
+    {
+      "label": "ble",
+      "type": "comm"
+    }
+  ],
+  "libraries": [
+    {
+      "name": "jquery",
+      "version": "2.1.1"
+    }
+  ],
+  "plugins": [
+    {
+      "name": "cordova-plugin-ibeacon",
+      "version": "3.4.3"
+    },
+    {
+      "name": "de.appplant.cordova.plugin.local-notification",
+      "version": "0.8.4"
+    }
+  ],
+  "index-file": "index.html",
+  "uuid": "8f1dae58-7367-447d-8a26-010e47268fd4",
+  "icon": "iLocateLogo.png",
+  "doc-url": "http://evothings.com/2.2/doc/examples/ibeacon-scan.html",
+  "long-description": "App that scans for iBeacons to be used as a starting point for iBeacons apps.",
+  "cordova-id": "com.evothings.examples.ibeaconscan"
+}

@@ -1,0 +1,593 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.light
+{
+	justify-content: center !important;
+	color: white;
+	font-size: small !important;
+}
+.foot{
+	justify-content: center !important;
+}
+.user
+{
+    color:gray;
+    justify-content: center !important;
+	text-align: center;
+}
+.message{
+
+    color: red !important;
+	font-size: small !important;
+	}
+.responsive {
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+body{
+
+/*	background: rgba(61,92,117,1) url(../images/world-map-dotted-black.png);
+
+	background: -moz-radial-gradient(center, ellipse cover, rgba(61,92,117,1) 0%, rgba(42,69,90,1) 100%);
+
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(61,92,117,1)), color-stop(100%, rgba(42,69,90,1)));
+
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(61,92,117,1) 0%, rgba(42,69,90,1) 100%);
+
+	background: -o-radial-gradient(center, ellipse cover, rgba(61,92,117,1) 0%, rgba(42,69,90,1) 100%);
+
+	background: -ms-radial-gradient(center, ellipse cover, rgba(61,92,117,1) 0%, rgba(42,69,90,1) 100%);
+
+	background: radial-gradient(ellipse at center, rgba(61,92,117,1) 0%, rgba(42,69,90,1) 100%);
+
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d5c75', endColorstr='#2a455a', GradientType=1 );*/
+
+	background: #102753 url(../images/world-map-dotted-black.png) no-repeat;
+
+	background-size: 100%;
+
+    }
+
+.vehicleentry{
+
+	width: 60%;
+
+	float:right;
+
+}
+
+
+
+.blue-transparent{
+
+	background-color: #0f1e3894;
+
+    border: 1px solid rgba(0,0,0,.125);
+
+    font-size: 12px;
+
+    color: #c0cfd6;
+
+}
+
+
+
+
+
+div.btn-control button {
+
+    float: right;
+
+    border: 1px solid #30607459;
+
+    clear: right;
+
+    color: #b5bfc1;
+
+    padding: 0 3px;
+
+    margin: 0;
+
+    line-height: 2;
+
+    font-size: 12px;
+
+}
+
+
+
+
+
+.list-group-item{
+
+        background-color: #00030617;
+
+    border: 1px solid rgba(0,0,0,.125);
+
+    font-size: 12px;
+
+    color: #c0cfd6;
+
+    padding: .34rem;
+
+}
+
+
+
+.list-group-item span.badge{
+
+	    background-color: #295870;
+
+    font-weight: normal;
+
+	margin-top: 2px;
+
+}
+
+
+
+
+
+
+
+.map-box{
+
+	width: 658px;
+
+	margin: 0 auto;
+
+	height: 658px;
+
+	background-image: url(../images/base.png);
+
+	border: 10px solid #315867;
+
+	background-size: 100%;
+
+	position: relative;
+
+	
+
+}
+
+
+
+.eveningmode{
+
+	background-image:url(../images/map-evening.png);
+
+}
+
+
+
+
+
+.nightmode{
+
+	background-image: url(../images/map-night.png);
+
+}
+
+
+
+
+
+.smoke{
+
+	width: 222px;
+
+    height: 222px;
+
+    position: absolute;
+
+	display: none;
+
+    background-size: 100%;
+
+    bottom: 0px;
+
+    left: 135px;
+
+    background-image: url(../images/source.gif);
+
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+
+.sprinkler{
+
+	width: 51px;
+
+    height: 222px;
+
+    position: absolute;
+
+    background-size: 100%;
+
+    bottom: 187px;
+
+    left: 0px;
+
+    background-image: url(../images/smart-city-demo.gif);
+
+    background-repeat: no-repeat;
+
+	display: none;
+
+}
+
+
+
+
+
+.salert{
+
+	width: 50px;
+
+    height: 50px;
+
+    position: absolute;
+
+    background-size: 100%;
+
+    bottom: 60px;
+
+    left: 187px;
+
+    background-image: url(../images/alert-image.gif);
+
+    background-repeat: no-repeat;
+
+    display: none;
+
+	
+
+}
+
+
+
+
+
+.dustbin{
+
+    width: 24px;
+
+    height: 24px;
+
+    position: absolute;
+
+    background-size: 100%;
+
+    bottom: 357px;
+
+    left: 142px;
+
+    background-image: url(../images/dustbin.png);
+
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+
+.dustbin2{
+
+    width: 24px;
+
+    height: 24px;
+
+    position: absolute;
+
+    background-size: 100%;
+
+    bottom: 244px;
+
+    right: 153px;
+
+    background-image: url(../images/dustbin.png);
+
+    background-repeat: no-repeat;
+
+}
+
+
+
+.sig2{
+
+	bottom: 102px !important;
+
+    left: 320px !important;
+
+    transform: rotate(-90deg);
+
+}
+
+
+
+.filled-dust{background-image:url(../images/fulldustbin.png); !important}
+
+
+
+.signal{
+
+	width: 58px;
+
+    height: 30px;
+
+    position: absolute;
+
+    bottom: 215px;
+
+    left: 157px;
+
+    background: url(../images/street-light.gif) no-repeat;
+
+    background-size: 100%;
+
+}
+
+
+
+
+
+.camera{
+
+	width: 28px;
+
+    height: 48px;
+
+    position: absolute;
+
+    bottom: 215px;
+
+    left: 157px;
+
+    background-size: 100%;
+
+    z-index: 9;
+
+	background: url(../images/camera-off.png) no-repeat;
+
+}
+
+
+
+.on{background: url(../images/camera-on.png) no-repeat !important;}
+
+
+
+
+
+.cam1{
+
+	left: 63px;
+
+    top: 306px;
+
+}
+
+
+
+.entrystat{	
+
+	width: 30px; text-align: center;
+
+}
+
+
+
+.cam2{
+
+	left: 530px;
+
+    top: 159px;
+
+}
+
+
+
+.red-on{background: url(../images/signal1.png) no-repeat !important;}
+
+.green-on{background: url(../images/signal2.png) no-repeat !important;}
+
+.yellow-on{background: url(../images/signal3.png) no-repeat !important;}
+
+
+
+.streetlight{
+
+	width: 186px;
+
+    height: 149px;
+
+    position: absolute;
+
+    bottom: 320px;
+
+    left: 363px;
+
+    background: url(../images/light-off.png) no-repeat;
+
+}
+
+
+
+
+
+.light-on{
+
+	background:url(../images/light-on.png) no-repeat !important;
+
+}
+
+
+
+.light-dim{
+
+	background:url(../images/light-dim.png) no-repeat !important;
+
+}
+
+
+
+
+
+.car1{
+
+	width: 15px;
+
+    height: 31px;
+
+    position: absolute;
+
+    transform: rotate(180deg);
+
+    bottom: 5px;
+
+    left: 412px;
+
+    background-size: 100%;
+
+    background-image: url(../images/car.png);
+
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+
+.man-1{
+
+	background-image: url(../images/person-walk.png);
+
+    width: 15px;
+
+    height: 18px;
+
+    position: absolute;
+
+    bottom: 114px;
+
+    left: 0px;
+
+	transition:8s;
+
+
+
+}
+
+
+
+.cross-road1{
+
+	 left: 48px;
+
+}
+
+
+
+.cross-road2{
+
+	 left: 155px;
+
+}
+
+
+
+@keyframes goright {
+
+	from { left: 0px; }
+
+	to   { left: 48px; }
+
+}
+
+
+
+
+
+@keyframes goright2 {
+
+	from { left: 48px; }
+
+	to   { left: 135px; }
+
+}
+
+
+
+
+
+
+
+.svgbase{
+
+	width: 100%;
+
+	height: 100%;
+
+}
+
+/*****svg animation****/
+
+
+
+svg {
+
+      position: absolute;
+
+      display: block;
+
+
+
+path {
+
+        stroke: darken($color-svg, 10%);
+
+        stroke-width: 10px;
+
+        stroke-linejoin: round;
+
+        stroke-linecap: round;
+
+        stroke-dasharray: 1px, 15px;
+
+        fill: $color-svg;
+
+      }
+
+
+
+
+
+	
+
+	
+
+/**********************/
+
+	
+
+
+
